@@ -1,0 +1,10 @@
+# prometheus.yml — tells Prometheus what to scrape and how often.
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: "pdm_api"
+    metrics_path: /metrics
+    static_configs:
+      # 'api' is the service name from docker-compose; Docker's internal DNS resolves it
+      - targets: ["api:8000"]

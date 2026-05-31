@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+mlruns/
+.git/
+data/
+notebook/
+frontend/

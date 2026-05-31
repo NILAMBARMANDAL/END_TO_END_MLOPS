@@ -1,0 +1,24 @@
+# --- core ML ---
+scikit-learn
+pandas
+numpy
+joblib
+xgboost
+lightgbm
+imbalanced-learn
+# --- MLOps stack ---
+zenml
+mlflow
+# --- data source ---
+pymongo
+python-dotenv
+# --- serving ---
+fastapi
+uvicorn[standard]
+pydantic
+# --- monitoring ---
+prometheus-client
+prometheus-fastapi-instrumentator
+# --- misc ---
+click
+rich

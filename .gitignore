@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+mlruns/
+mlflow.db
+artifacts/
+data/
+*.joblib
+.zen/

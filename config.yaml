@@ -1,0 +1,28 @@
+# config.yaml — single source of truth for WHICH model and WHICH hyperparameters.
+# Change values here and re-run the pipeline; no Python edits needed.
+enable_cache: false
+
+extra:
+  tags: predictive-maintenance
+
+settings:
+  docker:
+    required_integrations:
+      - mlflow
+
+steps:
+  train_model:
+    experiment_tracker: mlflow_tracker
+    parameters:
+      config:
+        model_name: "randomforest"   # logistic_regression | randomforest | xgboost | lightgbm
+        fine_tuning: false
+        hyperparameters:             # these are passed straight into the model
+          n_estimators: 200
+          max_depth: 12
+          min_samples_split: 5
+          min_samples_leaf: 2
+          class_weight: "balanced"
+
+  evaluation:
+    experiment_tracker: mlflow_tracker
